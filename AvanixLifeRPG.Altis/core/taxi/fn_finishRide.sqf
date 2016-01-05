@@ -1,0 +1,10 @@
+_cash = _this select 0;
+_pricePerM = _this select 1;
+_totalDistance = (_cash/_pricePerM);
+_totalDistance = floor _totalDistance;
+avanix_cash = avanix_cash + _cash;
+player removeAction taxi_ActionToLeave;
+_message = parseText format ["Dein fahrgast hat die Fahrt gestoppt. Du bekommst %1€ für eine Strecke von %2 Meter. Du wurdest automatisch wieder auf die Liste der verfügbaren Fahrer gesetzt.",_cash,_totalDistance];
+titleText[format["%1",_message],"PLAIN"];
+avanix_isOnDutyTaxi = true;
+[[player],"TON_fnc_goOnDuty",false,false] spawn avanix_fnc_mp;
