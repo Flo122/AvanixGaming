@@ -92,7 +92,8 @@ switch (_vehicle) do
 			["textures\feuerwehr\feuerwehr_limo.paa","med"],
 			["\a3\soft_f_gamma\Hatchback_01\data\hatchback_01_ext_base08_co.paa","cop"], //Schwarz
 			["\a3\soft_f_gamma\Hatchback_01\data\hatchback_01_ext_base09_co.paa","cop"], //Schwarz Alt
-			["textures\sek\sek_limo.paa","cop"]
+			["textures\sek\sek_limo.paa","cop"],
+			["textures\zivilist\starwars_limo.paa","vip"]
 		];
 	};
 	
@@ -115,7 +116,8 @@ switch (_vehicle) do
 			["textures\feuerwehr\feuerwehr_limo.paa","med"],
 			["\a3\soft_f_gamma\Hatchback_01\data\hatchback_01_ext_base08_co.paa","cop"], //Schwarz
 			["\a3\soft_f_gamma\Hatchback_01\data\hatchback_01_ext_base09_co.paa","cop"], //Schwarz Alt
-			["textures\sek\sek_limo.paa","cop"]
+			["textures\sek\sek_limo.paa","cop"],
+			["textures\zivilist\starwars_limo.paa","vip"]
 		];
 	};
 	
@@ -302,7 +304,8 @@ switch (_vehicle) do
 	{
 		_ret = 
 		[
-			["textures\rebel\rebel_ifrit_0.paa","cop","textures\rebel\rebel_ifrit_1.paa"]
+			["textures\rebel\rebel_ifrit_0.paa","reb","textures\rebel\rebel_ifrit_1.paa"],
+			["textures\sek\sek_ifrit_0.paa","cop","textures\sek\sek_ifrit_1.paa"]
 		];
 	};
 	

@@ -89,6 +89,7 @@ switch (_vehicle) do
 			case 11: {_color = "Kripo"};
 			case 12: {_color = "Kripo Alt"};
 			case 13: {_color = "SEK";};
+			case 14: {_color = "Starwars";};
 		};
 	};
 	
@@ -110,6 +111,7 @@ switch (_vehicle) do
 			case 11: {_color = "Kripo"};
 			case 12: {_color = "Kripo Alt"};
 			case 13: {_color = "SEK";};
+			case 14: {_color = "Starwars";};
 		};
 	};
 	
@@ -280,6 +282,7 @@ switch (_vehicle) do
 		switch (_index) do
 		{
 			case 0: {_color = "Rebel"};
+			case 1: {_color = "SEK"};
 		};
 	};
 	
