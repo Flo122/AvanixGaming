@@ -104,7 +104,7 @@ if((_curTarget getVariable["restrained",false]) && playerSide == west) then
     _idx = _idx + 1;
     _button ctrlSetText "Ins Gefängnis";
 	_button buttonSetAction "closeDialog 0; [] call avanix_fnc_showArrestDialog;";
-    if(!((player distance (getMarkerPos "jail_marker") < 30))) then 
+    if(!((player distance (getMarkerPos "jail_marker_1") < 30))) then 
     {
         _button ctrlEnable false;
     };

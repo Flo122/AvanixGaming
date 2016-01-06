@@ -11184,7 +11184,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_InfoStand_V2_F";
 			skill=0.60000002;
-			init="this enableSimulation false; this allowDamage false; this addAction[""Verwahrungsstelle"",  {   [[getPlayerUID player,playerSide,""Car"",player],""TON_fnc_getimpoundedVehicles"",false,false] spawn avanix_fnc_MP;   createDialog ""avanix_impounded_menu"";   disableSerialization;   ctrlSetText[28020,""Suche verwarte Fahrzeuge""];   avanix_garage_sp = ""impounded_1""; avanix_garage_type = ""Car"";  },"""",0,false,false,""""]; ";
+			init="this enableSimulation false; this allowDamage false; this addAction[""Fahrzeug Verwahrungsstelle"",  {   [[getPlayerUID player,playerSide,""Car"",player],""TON_fnc_getimpoundedVehicles"",false,false] spawn avanix_fnc_MP;   createDialog ""avanix_impounded_menu"";   disableSerialization;   ctrlSetText[28020,""Suche verwarte Fahrzeuge""];   avanix_garage_sp = ""impounded_1""; avanix_garage_type = ""Car"";  },"""",0,false,false,""""]; this addAction[""Helikopter Verwahrungsstelle"",  {   [[getPlayerUID player,playerSide,""Air"",player],""TON_fnc_getimpoundedVehicles"",false,false] spawn avanix_fnc_MP;   createDialog ""avanix_impounded_menu"";   disableSerialization;   ctrlSetText[28020,""Suche verwarte Fahrzeuge""];   avanix_garage_sp = ""impounded_1""; avanix_garage_type = ""Air"";  },"""",0,false,false,""""];";
 		};
 		class Item710
 		{

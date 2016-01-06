@@ -7,7 +7,7 @@
 private["_asservatenkammer","_door","_doors","_cpRate","_title","_progressBar","_titleText","_cp","_ui"];
 _asservatenkammer = [_this,0,ObjNull,[ObjNull]] call BIS_fnc_param;
 if(isNull _asservatenkammer) exitWith {};
-if({side _x == west} count playableUnits < 0) exitWith {hint "Es sind zu wenig Polizisten Online, das Gold wurde vorher an einem geheimen Ort versteckt."};
+if({side _x == west} count playableUnits < 5) exitWith {hint "Es sind zu wenig Polizisten Online, das Gold wurde vorher an einem geheimen Ort versteckt."};
 if(avanix_inv_crowbar == 0) exitWith {
 	titleText["Du hast kein Brecheisen.","PLAIN"];
 };

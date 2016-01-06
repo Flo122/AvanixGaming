@@ -2,7 +2,7 @@
 #include "dialog\infistar\CfgRemoteExec.hpp"
 
 author = "Avanix-Gaming.de seit 2013";
-onLoadName = "Avanix Life RPG #1.3";
+onLoadName = "Avanix Life RPG #1.4";
 onLoadMission = "Ein Rollenspiel entwickelt von Tonic";
 loadScreen = "textures\misc\logo.jpg";
 joinUnassigned = 1;

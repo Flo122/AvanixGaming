@@ -81,7 +81,3 @@ private["_queryResult","_query","_hideout","_owner","_members","_gangName","_id"
 		[_terminal,"red","orange","green"] call BIS_fnc_DataTerminalColor;
 	};
 } foreach [1,2,3,4];
-
-
-
-

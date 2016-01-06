@@ -16,13 +16,10 @@ _query = format["asservatenkammerInit:%1",1];
 _queryResult = [_query,2] call DB_fnc_asyncCall;
 
 _id = _queryResult select 0;
-diag_log format ["////ID:%1////",_id];
 _trunk = [(_queryResult select 1)] call DB_fnc_mresToArray;
 if(typeName _trunk == "STRING") then {_trunk = call compile format["%1", _trunk];};
-diag_log format ["////TRUNK:%1////",_trunk];
 _containers = [(_queryResult select 2)] call DB_fnc_mresToArray;
 if(typeName _containers == "STRING") then {_containers = call compile format["%1", _containers];};
-diag_log format ["////INVENTORY:%1////",_containers];
 
 _asservatenkammer setVariable ["Trunk",_trunk,true];
 _asservatenkammer setVariable ["locked",true,true];
@@ -51,7 +48,3 @@ if (count _containers > 0) then
 		_asservatenkammer addBackpackCargoGlobal [((_backpacks select 0) select _i), ((_backpacks select 1) select _i)];
 	};
 };
-
-
-
-

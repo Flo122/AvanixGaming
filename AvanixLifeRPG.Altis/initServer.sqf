@@ -35,5 +35,3 @@ if (hasInterface) then {
         };
     };
 };
-
-[] call compile PreprocessFileLineNumbers "\@Arma3Log\init.sqf";

@@ -12,12 +12,9 @@ avanix_versionInfo = "Avanix Life RPG v3.1.4.8";
 [] execVM "briefing.sqf"; //Load Briefing
 [] execVM "KRON_Strings.sqf";
 [] execVM "core\avanix\misc\fn_colorEffects.sqf";
-
 [] execVM "core\avanix\robShop\fn_robShopInit.sqf";
 
-
 StartProgress = true;
-
 
 setTerrainGrid 45;
 setViewDistance 1000;

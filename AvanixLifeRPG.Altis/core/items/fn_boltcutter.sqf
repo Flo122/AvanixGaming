@@ -7,7 +7,7 @@
 private["_gate","_door","_doors","_cpRate","_title","_progressBar","_titleText","_cp","_ui"];
 _gate = [_this,0,ObjNull,[ObjNull]] call BIS_fnc_param;
 if(isNull _gate) exitWith {};
-if({side _x == west} count playableUnits < 0) exitWith {hint "Es sind zu wenig Polizisten Online, das Gold wurde vorher an einem geheimen Ort versteckt."};
+if({side _x == west} count playableUnits < 5) exitWith {hint "Es sind zu wenig Polizisten Online, das Gold wurde vorher an einem geheimen Ort versteckt."};
 if(avanix_inv_boltcutter == 0) exitWith {
 	titleText["Du hast kein Bolzenschneider.","PLAIN"];
 };

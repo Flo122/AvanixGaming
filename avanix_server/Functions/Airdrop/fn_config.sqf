@@ -22,5 +22,3 @@ airdrop_time_max = airdrop_time_max*3600;
 if (airdrop_time_min>=airdrop_time_max) exitWith {airdrop_enable=false;};
 airdrop_enable=true;
 airdrop_goingon=false;
-
-diag_log "Airdrop config geladen";

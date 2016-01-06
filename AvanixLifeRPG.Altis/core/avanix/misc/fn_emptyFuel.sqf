@@ -19,28 +19,28 @@ while{true} do
 	{
 		_velocityOfVehicle = sqrt(((velocity _vehicleToFuel select 0)^2)+((velocity _vehicleToFuel select 1)^2))*3.6;
 		/*
-				switch (typeOf (_vehicleToFuel)) do 
+		switch (typeOf (_vehicleToFuel)) do 
 		{
 			case "C_Hatchback_01_sport_F":{_fuelConsumption = _velocityOfVehicle/100000 + 0.0001;}; //Here you can add some other vehicles.
 			default {_fuelConsumption = _velocityOfVehicle/100000 + 0.0001;}
 		};
 		*/
 		switch(true) do
-			{
-				case (_speed >= 0 and _speed < 5): 		{_fuelConsumption = _velocityOfVehicle/100000 + 0.00001};
-				case (_speed >= 5 and _speed < 15): 	{_fuelConsumption = _velocityOfVehicle/100000 + 0.00002};
-				case (_speed >= 15 and _speed < 30): 	{_fuelConsumption = _velocityOfVehicle/100000 + 0.00003};
-				case (_speed >= 30 and _speed < 55): 	{_fuelConsumption = _velocityOfVehicle/100000 + 0.00004};
-				case (_speed >= 55 and _speed < 70): 	{_fuelConsumption = _velocityOfVehicle/100000 + 0.00005};
-				case (_speed >= 70 and _speed < 85): 	{_fuelConsumption = _velocityOfVehicle/100000 + 0.00006};
-				case (_speed >= 85 and _speed < 100): 	{_fuelConsumption = _velocityOfVehicle/100000 + 0.00007};
-				case (_speed >= 100 and _speed < 115): 	{_fuelConsumption = _velocityOfVehicle/100000 + 0.00008};
-				case (_speed >= 115 and _speed < 130): 	{_fuelConsumption = _velocityOfVehicle/100000 + 0.00009};
-				case (_speed >= 130 and _speed < 500): 	{_fuelConsumption = _velocityOfVehicle/100000 + 0.00010};
-				//case (_speed >= 145 and _speed < 160): 	{_fuelConsumption = _velocityOfVehicle/100000 + 0.0012};
-				//case (_speed >= 160 and _speed < 350): 	{_fuelConsumption = _velocityOfVehicle/100000 + 0.0015};
-				//case (_speed >= 350 and _speed < 400): 	{_fuelConsumption = _velocityOfVehicle/100000 + 0.0018};
-			};
+		{
+			case (_speed >= 0 and _speed < 5): 		{_fuelConsumption = _velocityOfVehicle/100000 + 0.00001};
+			case (_speed >= 5 and _speed < 15): 	{_fuelConsumption = _velocityOfVehicle/100000 + 0.00002};
+			case (_speed >= 15 and _speed < 30): 	{_fuelConsumption = _velocityOfVehicle/100000 + 0.00003};
+			case (_speed >= 30 and _speed < 55): 	{_fuelConsumption = _velocityOfVehicle/100000 + 0.00004};
+			case (_speed >= 55 and _speed < 70): 	{_fuelConsumption = _velocityOfVehicle/100000 + 0.00005};
+			case (_speed >= 70 and _speed < 85): 	{_fuelConsumption = _velocityOfVehicle/100000 + 0.00006};
+			case (_speed >= 85 and _speed < 100): 	{_fuelConsumption = _velocityOfVehicle/100000 + 0.00007};
+			case (_speed >= 100 and _speed < 115): 	{_fuelConsumption = _velocityOfVehicle/100000 + 0.00008};
+			case (_speed >= 115 and _speed < 130): 	{_fuelConsumption = _velocityOfVehicle/100000 + 0.00009};
+			case (_speed >= 130 and _speed < 500): 	{_fuelConsumption = _velocityOfVehicle/100000 + 0.00010};
+			//case (_speed >= 145 and _speed < 160): 	{_fuelConsumption = _velocityOfVehicle/100000 + 0.0012};
+			//case (_speed >= 160 and _speed < 350): 	{_fuelConsumption = _velocityOfVehicle/100000 + 0.0015};
+			//case (_speed >= 350 and _speed < 400): 	{_fuelConsumption = _velocityOfVehicle/100000 + 0.0018};
+		};
 		
 		_vehicleToFuel setFuel ((fuel _vehicleToFuel)-_fuelConsumption);
 		_displayFuel = _fuelConsumption*10000/2;

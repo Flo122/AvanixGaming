@@ -58,7 +58,6 @@ if (!_extDB2) exitWith {
 ["deleteDonatorlvl",1] spawn DB_fnc_asyncCall;
 ["deleteRentHouses",1] spawn DB_fnc_asyncCall;
 ["updateRentHouses",1] spawn DB_fnc_asyncCall;
-//["getGUID",1] spawn DB_fnc_asyncCall;
 
 [8,true,12] execFSM "\avanix_server\FSM\timeModule.fsm";
 
@@ -143,6 +142,8 @@ pb_spieler = [];
 pb_spielstatus = 0;
 pb_maxspieler = 10;
 execVM "\avanix_server\Functions\paintball\arena_paintball.sqf";
+
+[] call compile PreprocessFileLineNumbers "\@Arma3Log\init.sqf";
 
 avanix_server_isReady = true;
 publicVariable "avanix_server_isReady";

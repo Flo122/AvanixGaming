@@ -337,6 +337,3 @@ compileFinal "
 	   ] spawn BIS_fnc_dynamicText;
 ";
 publicVariable "TON_fnc_showMsg";
-
-
-

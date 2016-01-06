@@ -81,7 +81,7 @@ _rip = _shop getVariable "_status";
 if (_loot == 0) exitWith {hint "Momentan ist kein Geld in der Kasse!"};
 if (vehicle player != _robber) exitWith {hint "Du musst aus dem Fahrzeug aussteigen!"};
 if (currentWeapon _robber == "") exitWith {hint "Du brauchst ne Waffe!"};
-if ((west countSide playableUnits) < 4) exitWith {hint "Es sind nicht genügend Polizisten online!"};
+if ((west countSide playableUnits) < 5) exitWith {hint "Es sind nicht genügend Polizisten online!"};
 if (_rip) exitWith {hint "Die Tankestelle wird bereits ausgeraubt!"};
 if !(alive _robber) exitWith {};
 if !(playerside == civilian) exitWith {hint "Du bist im Dienst!"};

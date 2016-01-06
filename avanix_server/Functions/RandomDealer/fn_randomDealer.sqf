@@ -50,5 +50,4 @@ if (isServer) then
 	"Marker998" setMarkerColor "ColorRed";
 	"Marker998" setMarkerText "DROGENDEALER";
 	"Marker998" setMarkerType "hd_warning";
-	diag_log "::Life Dealer:: 1st Section Completed";
 };

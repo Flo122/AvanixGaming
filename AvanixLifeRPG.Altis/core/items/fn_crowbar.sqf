@@ -8,7 +8,7 @@ private["_building","_door","_doors","_cpRate","_title","_progressBar","_titleTe
 _building = [_this,0,ObjNull,[ObjNull]] call BIS_fnc_param;
 if(isNull _building) exitWith {};
 if(!(_building isKindOf "House_F")) exitWith {hint "Du musst das Tor schon anschauen!"};
-if({side _x == west} count playableUnits < 2) exitWith {hint "Es sind zu wenig Polizisten Online, das Gold wurde vorher an einem geheimen Ort versteckt."};
+if({side _x == west} count playableUnits < 5) exitWith {hint "Es sind zu wenig Polizisten Online, das Gold wurde vorher an einem geheimen Ort versteckt."};
 if(avanix_inv_crowbar == 0) exitWith {
 	titleText["Du hast kein Brecheisen.","PLAIN"];
 };

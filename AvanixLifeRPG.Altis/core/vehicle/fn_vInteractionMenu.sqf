@@ -175,15 +175,16 @@ if("ToolKit" in (items player)) then {_Btn1 ctrlEnable true;} else {_Btn1 ctrlEn
 		};
 	};
 	
-	_Btn3 ctrlSetText "ADAC beauftragen";
-	//_Btn3 buttonSetAction "[avanix_vInact_curTarget] spawn avanix_fnc_adacCallAction; closeDialog 0;";
-	_Btn3 buttonSetAction "closeDialog 0;[] call avanix_fnc_adac_call;[avanix_vInact_curTarget] spawn avanix_fnc_adacCallAction;";
+	_Btn3 ctrlSetText "Aufbrechen";
+	_Btn3 buttonSetAction "closeDialog 0;[[cursorTarget,0], ""avanix_fnc_lockVehicle"",cursorTarget,false] spawn avanix_fnc_MP;";
 	
 	_Btn4 ctrlSetText "Sp. rausziehen";
 	_Btn4 buttonSetAction "[avanix_vInact_curTarget] spawn avanix_fnc_pulloutAction;";
 	if(count crew _curTarget == 0) then {_Btn4 ctrlEnable false;};
 	
-	_Btn5 ctrlShow false;
+	_Btn5 ctrlSetText "Abschleppen";
+	_Btn5 buttonSetAction "[avanix_vInact_curTarget] spawn avanix_fnc_impoundAction;";
+	
 	_Btn6 ctrlShow false;
 	_Btn7 ctrlShow false;
 	_Btn8 ctrlShow false;
