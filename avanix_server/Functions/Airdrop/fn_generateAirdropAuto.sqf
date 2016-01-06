@@ -12,7 +12,7 @@ if (airdrop_goingon) exitWith {};
 
 _toWait = (random (airdrop_time_max - airdrop_time_min)) + airdrop_time_min;
 uisleep _toWait; // Wait abit for the airdrop
-if({side _x == civilian} count playableUnits < 10) exitWith {};
+if({side _x == civilian} count playableUnits <= 5) exitWith {};
 
 if (!airdrop_enable) exitWith {};
 if (airdrop_goingon) exitWith {};
