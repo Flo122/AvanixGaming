@@ -17,7 +17,7 @@ link4[] = {4,2};
 link5[] = {5,6};
 link6[] = {6,7};
 link7[] = {7,3};
-globals[] = {0.000000,0,0,0,0,640,480,1,26,6316128,1,-456.200378,358.065338,379.837494,-151.171021,916,911,1};
+globals[] = {0.000000,0,0,0,0,640,480,1,26,6316128,1,-648.052917,549.917664,849.454956,-341.976318,916,911,1};
 window[] = {2,-1,-1,-1,-1,843,25,1465,25,3,934};
 *//*%FSM</HEAD>*/
 class FSM
@@ -77,35 +77,26 @@ class FSM
       name = "Pay_me_";
       init = /*%FSM<STATEINIT""">*/"if(!alive player) then" \n
        "{" \n
-       "	systemChat localize ""STR_FSM_MissedPay"";" \n
+       "	systemChat ""Du erhältst kein Gehaltsscheck, da du gestorben bist."";" \n
        "}" \n
        "	else" \n
        "{" \n
-       "	if(player distance (getMarkerPos ""afk_1"") < 10) then" \n
+       "	if(playerside == west) then " \n
        "	{" \n
-       "		if(playerside == civilian) then" \n
+       "		if(player distance (getMarkerPos ""fed_reserve"") < 120) then" \n
        "		{" \n
-       "			systemChat format[localize ""STR_FSM_ReceivedPay"",[(call avanix_paycheck) + 2500] call avanix_fnc_numberText];" \n
-       "			avanix_atmcash = avanix_atmcash + (call avanix_paycheck) + 2500;" \n
-       "			avanix_hunger = 100;" \n
-       "			avanix_thirst = 100;" \n
-       "		}" \n
-       "			else" \n
-       "		{" \n
-       "			systemChat format[localize ""STR_FSM_ReceivedPay"",[(call avanix_paycheck) + 1500] call avanix_fnc_numberText];" \n
-       "			avanix_atmcash = avanix_atmcash + (call avanix_paycheck) + 1500;" \n
-       "			avanix_hunger = 100;" \n
-       "			avanix_thirst = 100;" \n
+       "			_price = _price + (call avanix_paycheck) + 1500;" \n
+       "		} else {" \n
+       "			_price = _price + (call avanix_paycheck);" \n
        "		};" \n
-       "	}" \n
-       "		else" \n
+       "	};" \n
+       "	if(playerside == independent) then " \n
        "	{" \n
-       "		if(player distance (getMarkerPos ""fed_reserve"") < 120 && playerSide == west) then" \n
-       "		{" \n
-       "			systemChat format[localize ""STR_FSM_ReceivedPay"",[(call avanix_paycheck) + 1500] call avanix_fnc_numberText];" \n
-       "			avanix_atmcash = avanix_atmcash + (call avanix_paycheck) + 1500;" \n
-       "		};" \n
-       "		if(playersNumber civilian >= 0 && (count (group player getVariable ""gang_members"") >= 3)) then " \n
+       "		_price = _price + (call avanix_paycheck);" \n
+       "	};" \n
+       "	if(playerside == civilian) then " \n
+       "	{" \n
+       "		if(playersNumber civilian >= 5) then " \n
        "		{" \n
        "			_gangpaycheck = 0;" \n
        "			if( format [""%1"",markerText ""gang_area_1""] == format[""Territorium von %1"",(group player) getVariable ""gang_name""]) then {_gangpaycheck=_gangpaycheck + 1;};" \n
@@ -113,15 +104,19 @@ class FSM
        "			if( format [""%1"",markerText ""gang_area_3""] == format[""Territorium von %1"",(group player) getVariable ""gang_name""]) then {_gangpaycheck=_gangpaycheck + 1;};" \n
        "			if( format [""%1"",markerText ""gang_area_4""] == format[""Territorium von %1"",(group player) getVariable ""gang_name""]) then {_gangpaycheck=_gangpaycheck + 1;};		" \n
        "			_paycheck = _gangpaycheck * 500;" \n
-       "			avanix_atmcash = avanix_atmcash + _paycheck;" \n
-       "			systemChat format[localize ""STR_FSM_ReceivedPay"",[(call avanix_paycheck) + _paycheck ] call avanix_fnc_numberText];" \n
-       "		}" \n
-       "			else" \n
-       "		{" \n
-       "			avanix_atmcash = avanix_atmcash + (call avanix_paycheck);" \n
-       "			systemChat format[localize ""STR_FSM_ReceivedPay"",[(call avanix_paycheck)] call avanix_fnc_numberText];" \n
+       "			_price = _price + _paycheck + (call avanix_paycheck);" \n
+       "		} else {" \n
+       "			_price = _price + (call avanix_paycheck);" \n
        "		};" \n
        "	};" \n
+       "	if(player distance (getMarkerPos ""afk_1"") < 10) then" \n
+       "	{" \n
+       "		_price = _price + 2500;" \n
+       "		avanix_hunger = 100;" \n
+       "		avanix_thirst = 100;" \n
+       "	};" \n
+       "	avanix_atmcash = avanix_atmcash + _price;" \n
+       "	systemChat format[""Du hast deinen Gehaltscheck in Höhe von %1€ erhalten"",[_price] call avanix_fnc_numberText];" \n
        "};" \n
        "" \n
        "_lastcheck = time;" \n
