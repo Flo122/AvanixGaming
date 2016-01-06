@@ -18,7 +18,7 @@ link5[] = {5,6};
 link6[] = {6,7};
 link7[] = {7,3};
 globals[] = {0.000000,0,0,0,0,640,480,1,26,6316128,1,-648.052917,549.917664,849.454956,-341.976318,916,911,1};
-window[] = {2,-1,-1,-1,-1,843,25,1465,25,3,934};
+window[] = {2,-1,-1,-1,-1,893,75,1515,75,3,934};
 *//*%FSM</HEAD>*/
 class FSM
 {
@@ -29,11 +29,12 @@ class FSM
     class Main_Init
     {
       name = "Main_Init";
-      init = /*%FSM<STATEINIT""">*/"private[""_lastcheck"",""_food"",""_water"",""_lastsync""];" \n
+      init = /*%FSM<STATEINIT""">*/"private[""_lastcheck"",""_food"",""_water"",""_lastsync"",""_price""];" \n
        "_lastcheck = time;" \n
        "_food = time;" \n
        "_water = time;" \n
-       "_lastsync = time;"/*%FSM</STATEINIT""">*/;
+       "_lastsync = time;" \n
+       "_price = 0;"/*%FSM</STATEINIT""">*/;
       precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
       class Links
       {
@@ -116,7 +117,7 @@ class FSM
        "		avanix_thirst = 100;" \n
        "	};" \n
        "	avanix_atmcash = avanix_atmcash + _price;" \n
-       "	systemChat format[""Du hast deinen Gehaltscheck in Höhe von %1€ erhalten"",[_price] call avanix_fnc_numberText];" \n
+       "	systemChat format[""Du hast deinen Gehaltscheck von %1€ erhalten"",[_price] call avanix_fnc_numberText];" \n
        "};" \n
        "" \n
        "_lastcheck = time;" \n
