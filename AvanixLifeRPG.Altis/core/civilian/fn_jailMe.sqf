@@ -6,7 +6,7 @@
 	Description:
 	Once word is received by the server the rest of the jail execution is completed.
 */
-private["_ret","_bad","_time","_bail","_esc","_countDown","_time","_sirene"];
+private["_ret","_bad","_time","_bail","_esc","_countDown","_time"];
 _ret = [_this,0,[],[[]]] call BIS_fnc_param;
 _bad = [_this,1,false,[false]] call BIS_fnc_param;
 _time = [_this,2,15,[0]] call BIS_fnc_param; //##80
@@ -97,8 +97,6 @@ switch (true) do
 
 		[[0,format["%1 ist aus dem Gefängnis ausgebrochen!",profileName]],"avanix_fnc_broadcast",nil,false] spawn avanix_fnc_MP;
 		[[getPlayerUID player,profileName,"901"],"avanix_fnc_wantedAdd",false,false] spawn avanix_fnc_MP;
-		_sirene = (nearestObjects [getMarkerPos "sirene_marker_jail", ["Land_Loudspeakers_F"], 10]) select 0;
-		[_sirene,"jailbreak"] call avanix_fnc_globalSound;  
 		_toLog = format ["3|%1 (%2) ist aus dem Gefängnis ausgebrochen.", name player, getPlayerUID player];
 		[[_toLog],"Arma3Log"] call avanix_fnc_MP;
 		[5] call SOCK_fnc_updatePartial;

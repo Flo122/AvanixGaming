@@ -74,7 +74,7 @@ if(_vest != "") then
 	
     if(_vest in avanix_illegal_stuffs OR (!license_civ_gun && (!(_vest in ["V_RebreatherB","V_RebreatherIR"])))) then {
 	    removeVest player;
-		_asservatenkammer addItemCargoGlobal [_vest,1];
+		_asservatenkammer addItemCargoGlobal [_x,1];
 	};
 };
 

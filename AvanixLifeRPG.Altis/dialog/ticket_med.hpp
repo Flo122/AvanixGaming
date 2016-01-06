@@ -101,7 +101,7 @@ class avanix_rechnung_pay
 
 		class payTicket: avanix_RscButtonMenu {
 			idc = -1;
-			text = "Bezahlen";
+			text = "Zahlen";
 			colorBackground[] = {0.016,0.282,0.624,0.5};
 			onButtonClick = "[] call avanix_fnc_medTicketPay;";
 			x = 0.2 + (6.25 / 40) + (1 / 250 / (safezoneW / safezoneH));
@@ -112,7 +112,7 @@ class avanix_rechnung_pay
 		
 		class refuseTicket : avanix_RscButtonMenu {
 			idc = -1;
-			text = "Ablehnen";
+			text = "Nicht Zahlen";
 			colorBackground[] = {0.016,0.282,0.624,0.5};
 			onButtonClick = "closeDialog 0;";
 			x = 0.4 + (6.25 / 40) + (1 / 250 / (safezoneW / safezoneH));

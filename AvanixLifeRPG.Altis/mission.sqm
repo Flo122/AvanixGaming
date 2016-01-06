@@ -3604,7 +3604,7 @@ class Mission
 	};
 	class Vehicles
 	{
-		items=1056;
+		items=1055;
 		class Item0
 		{
 			position[]={8065.1616,35.674362,24985.314};
@@ -14938,19 +14938,10 @@ class Mission
 			skill=0.60000002;
 			init="this allowDamage false; this enableSimulation false; this setVectorUp [0,0,1]; this addAction[""<t color='#ADFF2F'>Geldautomat</t>"",avanix_fnc_atmMenu,"""",0,FALSE,FALSE,"""",' vehicle player == player && player distance _target < 4 '];";
 		};
-		class Item1055
-		{
-			position[]={15322.469,16.98,17483.287};
-			id=1254;
-			side="EMPTY";
-			vehicle="Land_Loudspeakers_F";
-			skill=0.60000002;
-			init=" this enableSimulation false; this allowDamage false;";
-		};
 	};
 	class Markers
 	{
-		items=259;
+		items=254;
 		class Item0
 		{
 			position[]={8571.7803,109.28224,25051.129};
@@ -17001,52 +16992,6 @@ class Mission
 			type="loc_Tourism";
 			colorName="ColorGreen";
 			angle=211.84581;
-		};
-		class Item254
-		{
-			position[]={9955.375,252.26384,19355.047};
-			name="gangfight_1";
-			markerType="ELLIPSE";
-			type="Empty";
-			colorName="ColorRed";
-			a=200;
-			b=200;
-		};
-		class Item255
-		{
-			position[]={23491.969,92.135201,21114.754};
-			name="gangfight_1_1";
-			markerType="ELLIPSE";
-			type="Empty";
-			colorName="ColorRed";
-			a=200;
-			b=200;
-		};
-		class Item256
-		{
-			position[]={23052.906,48.65826,7306.1431};
-			name="gangfight_1_2";
-			markerType="ELLIPSE";
-			type="Empty";
-			colorName="ColorRed";
-			a=200;
-			b=200;
-		};
-		class Item257
-		{
-			position[]={12301.098,123.94157,8880.8555};
-			name="gangfight_1_3";
-			markerType="ELLIPSE";
-			type="Empty";
-			colorName="ColorRed";
-			a=200;
-			b=200;
-		};
-		class Item258
-		{
-			position[]={15322.49,16.98,17483.271};
-			name="sirene_marker_jail";
-			type="Empty";
 		};
 	};
 	class Sensors

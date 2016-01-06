@@ -101,7 +101,7 @@ class avanix_ticket_pay
 
 		class payTicket: avanix_RscButtonMenu {
 			idc = -1;
-			text = "Bezahlen";
+			text = "Ticket bezahlen";
 			colorBackground[] = {"(profilenamespace getvariable ['GUI_BCG_RGB_R',0.3843])", "(profilenamespace getvariable ['GUI_BCG_RGB_G',0.7019])", "(profilenamespace getvariable ['GUI_BCG_RGB_B',0.8862])", 0.5};
 			onButtonClick = "[] call avanix_fnc_ticketPay;";
 			x = 0.2 + (6.25 / 40) + (1 / 250 / (safezoneW / safezoneH));
@@ -112,7 +112,7 @@ class avanix_ticket_pay
 		
 		class refuseTicket : avanix_RscButtonMenu {
 			idc = -1;
-			text = "Ablehnen";
+			text = "Ticket ablehnen";
 			colorBackground[] = {"(profilenamespace getvariable ['GUI_BCG_RGB_R',0.3843])", "(profilenamespace getvariable ['GUI_BCG_RGB_G',0.7019])", "(profilenamespace getvariable ['GUI_BCG_RGB_B',0.8862])", 0.5};
 			onButtonClick = "closeDialog 0;";
 			x = 0.4 + (6.25 / 40) + (1 / 250 / (safezoneW / safezoneH));
