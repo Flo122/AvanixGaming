@@ -106,9 +106,9 @@ switch (_item) do
 	case "rohoel": {3};
 	case "erdoel": {3};
 	case "plastik": {2};
-	case "benzin": {3};
-	case "diesel": {3};
-	case "kerosin": {3};
+	case "benzin": {2};
+	case "diesel": {2};
+	case "kerosin": {2};
 	case "baumwolle": {2};
 	case "stoff": {4};
 			

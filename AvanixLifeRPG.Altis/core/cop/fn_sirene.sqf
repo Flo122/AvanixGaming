@@ -12,28 +12,28 @@ if(_stadt == 0) then {
 	_allowuse = true;
 	_sirene = getMarkerPos "sirene_marker_kavala";
 	avanix_schutz_kavala = true;
-	[[4,"<br/><t align='center'><t size='6'><img image='textures\misc\alarm.png'/></t></t><br/><br/><t size='1.4'><t color='#A5DF00'>Stadtwarnsystem</t></t><br/><br/><t size='1'>Achtung Achtung, die Polizeidirektion warnt vor einen Angriff auf Kavala. Bitte verlassen sie unverzüglich die Stadt!</t>"],"avanix_fnc_broadcast",true,false] spawn avanix_fnc_MP;
+	[[4,"<br/><t align='center'><t size='6'><img image='textures\misc\alarm.paa'/></t></t><br/><br/><t size='1.4'><t color='#A5DF00'>Stadtwarnsystem</t></t><br/><br/><t size='1'>Achtung Achtung, die Polizeidirektion warnt vor einen Angriff auf Kavala. Bitte verlassen sie unverzüglich die Stadt!</t>"],"avanix_fnc_broadcast",true,false] spawn avanix_fnc_MP;
 };
 if(_stadt == 1) then {
 	if (avanix_schutz_athira) exitWith {hint "Du hast die Sirene vor kurzem erst benutzt!"};
 	_allowuse = true;    
 	_sirene = getMarkerPos "sirene_marker_athira";
 	avanix_schutz_athira = true;
-	[[4,"<br/><t align='center'><t size='6'><img image='textures\misc\alarm.png'/></t></t><br/><br/><t size='1.4'><t color='#A5DF00'>Stadtwarnsystem</t></t><br/><br/><t size='1'>Achtung Achtung, die Polizeidirektion warnt vor einen Angriff auf Athira. Bitte verlassen sie unverzüglich die Stadt!</t>"],"avanix_fnc_broadcast",true,false] spawn avanix_fnc_MP;
+	[[4,"<br/><t align='center'><t size='6'><img image='textures\misc\alarm.paa'/></t></t><br/><br/><t size='1.4'><t color='#A5DF00'>Stadtwarnsystem</t></t><br/><br/><t size='1'>Achtung Achtung, die Polizeidirektion warnt vor einen Angriff auf Athira. Bitte verlassen sie unverzüglich die Stadt!</t>"],"avanix_fnc_broadcast",true,false] spawn avanix_fnc_MP;
 };
 if(_stadt == 2) then {
 	if (avanix_schutz_pyrgos) exitWith {hint "Du hast die Sirene vor kurzem erst benutzt!"};    
 	_allowuse = true;
 	_sirene = getMarkerPos "sirene_marker_pyrgos";
 	avanix_schutz_pyrgos = true;
-	[[4,"<br/><t align='center'><t size='6'><img image='textures\misc\alarm.png'/></t></t><br/><br/><t size='1.4'><t color='#A5DF00'>Stadtwarnsystem</t></t><br/><br/><t size='1'>Achtung Achtung, die Polizeidirektion warnt vor einen Angriff auf Pyrgos. Bitte verlassen sie unverzüglich die Stadt!</t>"],"avanix_fnc_broadcast",true,false] spawn avanix_fnc_MP;
+	[[4,"<br/><t align='center'><t size='6'><img image='textures\misc\alarm.paa'/></t></t><br/><br/><t size='1.4'><t color='#A5DF00'>Stadtwarnsystem</t></t><br/><br/><t size='1'>Achtung Achtung, die Polizeidirektion warnt vor einen Angriff auf Pyrgos. Bitte verlassen sie unverzüglich die Stadt!</t>"],"avanix_fnc_broadcast",true,false] spawn avanix_fnc_MP;
 };
 if(_stadt == 3) then {
 	if (avanix_schutz_sofia) exitWith {hint "Du hast die Sirene vor kurzem erst benutzt!"};    
 	_allowuse = true;
 	_sirene = getMarkerPos "sirene_marker_sofia";
 	avanix_schutz_sofia = true;
-	[[4,"<br/><t align='center'><t size='6'><img image='textures\misc\alarm.png'/></t></t><br/><br/><t size='1.4'><t color='#A5DF00'>Stadtwarnsystem</t></t><br/><br/><t size='1'>Achtung Achtung, die Polizeidirektion warnt vor einen Angriff auf Sofia. Bitte verlassen sie unverzüglich die Stadt!</t>"],"avanix_fnc_broadcast",true,false] spawn avanix_fnc_MP;
+	[[4,"<br/><t align='center'><t size='6'><img image='textures\misc\alarm.paa'/></t></t><br/><br/><t size='1.4'><t color='#A5DF00'>Stadtwarnsystem</t></t><br/><br/><t size='1'>Achtung Achtung, die Polizeidirektion warnt vor einen Angriff auf Sofia. Bitte verlassen sie unverzüglich die Stadt!</t>"],"avanix_fnc_broadcast",true,false] spawn avanix_fnc_MP;
 };
 if(_allowuse) then {
 	_sirn_min_dis = 10;

@@ -51,10 +51,10 @@ switch (_className) do
 	case "C_Van_01_fuel_F": {150};
 	case "C_Van_01_box_F": {180};
 	case "I_Truck_02_transport_F": {300};
-	case "O_Truck_03_fuel_F": {300};
+	case "O_Truck_02_fuel_F": {300};
 	case "I_Truck_02_covered_F": {400};
 	case "O_Truck_03_transport_F": {480};
-	case "O_Truck_02_fuel_F": {480};
+	case "O_Truck_03_fuel_F": {480};
 	case "O_Truck_03_covered_F": {540};
 	case "O_Truck_03_ammo_F": {600};
 	case "O_Truck_03_device_F": {1000};

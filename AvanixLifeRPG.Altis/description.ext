@@ -254,6 +254,13 @@ class CfgSounds
 		sound[] = {"\sounds\geiger2.ogg", 1.0, 1};
 		titles[] = {};
 	};
+	
+	class jailbreak
+	{
+		name = "jailbreak";
+		sound[] = {"\sounds\jailbreak.ogg", 1.0, 1};
+		titles[] = {};
+	};
 };
 
 
