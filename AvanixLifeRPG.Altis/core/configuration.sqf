@@ -128,10 +128,11 @@ switch (playerSide) do
 		avanix_atmcash = 7000; //Starting Bank Money
 		avanix_paycheck = 500; //Paycheck Amount
 	};
+	
 	case civilian: 
 	{
-		avanix_atmcash = 10000000000; //Starting Bank Money
-		avanix_paycheck = 1000000000; //Paycheck Amount
+		avanix_atmcash = 100000; //Starting Bank Money
+		avanix_paycheck = 500; //Paycheck Amount
 	};
 	
 	case independent: 
