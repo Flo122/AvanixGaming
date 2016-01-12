@@ -5,6 +5,8 @@ Mod: Epoch
 https://github.com/DarthRogue/Status_Bar
 Transfered to Altis Life + add   SBUserhy
 */
+if (!hasInterface && !isDedicated) then {exitwith{};};
+
 waitUntil {!(isNull (findDisplay 46))};
 disableSerialization;
 4 cutRsc ["osefStatusBar","PLAIN"]; 
